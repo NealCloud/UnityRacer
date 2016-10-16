@@ -1,0 +1,8 @@
+<linker>
+<assembly fullname="Assembly-CSharp">
+<type fullname="BarrierBehavior" preserve="all"/>
+<type fullname="BarrierMaker" preserve="all"/>
+<type fullname="CameraRotation" preserve="all"/>
+<type fullname="ShipBehavior" preserve="all"/>
+</assembly>
+</linker>
