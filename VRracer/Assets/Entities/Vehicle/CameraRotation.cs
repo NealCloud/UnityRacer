@@ -33,8 +33,6 @@ public class CameraRotation : MonoBehaviour {
         }
 
         clampMovement();
-        
-      
 
         float xbox = Input.GetAxis("Horizontal");
         if (xbox != 0)

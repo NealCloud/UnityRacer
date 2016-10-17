@@ -21,7 +21,9 @@ public class ShipBehavior : MonoBehaviour {
        
         if (other.gameObject.tag == "Wall")
         {
+            other.gameObject.GetComponent<BarrierBehavior>().BreakWall();
             Destroy(other.gameObject);
+            
         }
 
     }

@@ -9,6 +9,7 @@ public class BarrierMaker : MonoBehaviour {
     private Transform spawn1;
     [SerializeField]
     private Transform spawn2;
+   
     private IEnumerator buildwallco;
     private WaitForSeconds wallbuild = new WaitForSeconds(0.5f);
     // Use this for initialization
@@ -51,6 +52,8 @@ public class BarrierMaker : MonoBehaviour {
             StartCoroutine(BuildTheWall(new WaitForSeconds(Random.Range(0.5f, 2f))));
         //Invoke("buildDat", Random.Range(0.5f, 3.5f));
     }
+    
+
     void Update()
     {
         //Instantiate<Target>(targo);

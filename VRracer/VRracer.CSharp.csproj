@@ -65,6 +65,9 @@
   <ItemGroup>
     <Compile Include="Assets\Entities\Barrier\Script\BarrierBehavior.cs" />
     <Compile Include="Assets\Entities\Barrier\Script\BarrierMaker.cs" />
+    <Compile Include="Assets\Entities\Utils\LevelManager.cs" />
+    <Compile Include="Assets\Entities\Utils\ScoreHolder.cs" />
+    <Compile Include="Assets\Entities\Utils\TimeDisplay.cs" />
     <Compile Include="Assets\Entities\Vehicle\CameraRotation.cs" />
     <Compile Include="Assets\Entities\Vehicle\ShipBehavior.cs" />
   </ItemGroup>
