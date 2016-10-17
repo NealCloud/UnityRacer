@@ -18,7 +18,7 @@ public class ShipBehavior : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        print("ouchj");
+       
         if (other.gameObject.tag == "Wall")
         {
             Destroy(other.gameObject);

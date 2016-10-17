@@ -4,7 +4,11 @@ using System.Collections;
 public class BarrierMaker : MonoBehaviour {
 
     [SerializeField]
-    private BarrierBehavior block;
+    private GameObject barrier;
+    [SerializeField]
+    private Transform spawn1;
+    [SerializeField]
+    private Transform spawn2;
     private IEnumerator buildwallco;
     private WaitForSeconds wallbuild = new WaitForSeconds(0.5f);
     // Use this for initialization
@@ -19,7 +23,17 @@ public class BarrierMaker : MonoBehaviour {
 
     private IEnumerator BuildTheWall(WaitForSeconds waito)
     {
-        Instantiate<BarrierBehavior>(block);
+        Transform spawnAt;
+        if (Random.Range(0, 1.0f) > 0.5f)
+        {
+            spawnAt = spawn1;
+        }
+        else
+        {
+            spawnAt = spawn2;
+        }
+
+        Instantiate(barrier, spawnAt.position, Quaternion.Euler(0, 90, 0)); 
 
         yield return waito;
         checkGameOver();
@@ -28,13 +42,13 @@ public class BarrierMaker : MonoBehaviour {
 
     private void buildDat()
     {
-        Instantiate<BarrierBehavior>(block);
+        Instantiate(barrier, spawn2.position, Quaternion.Euler(0, 90, 0));
     }
 
     private void checkGameOver()
     {
-        print("checking");
-        StartCoroutine(BuildTheWall(new WaitForSeconds(Random.Range(0.5f, 2f))));
+       
+            StartCoroutine(BuildTheWall(new WaitForSeconds(Random.Range(0.5f, 2f))));
         //Invoke("buildDat", Random.Range(0.5f, 3.5f));
     }
     void Update()
